@@ -1,0 +1,3 @@
+HAL/FAN/FAN.o HAL/FAN/FAN.o: ../HAL/FAN/FAN.c ../HAL/FAN/FAN.h
+
+../HAL/FAN/FAN.h:

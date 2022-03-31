@@ -1,0 +1,20 @@
+03:52:41 **** Incremental Build of configuration Debug for project Authentication ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Authentication.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   22002 bytes (67.1% Full)
+(.text + .data + .bootloader)
+
+Data:        478 bytes (23.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+03:52:42 Build Finished. 0 errors, 0 warnings. (took 555ms)
+

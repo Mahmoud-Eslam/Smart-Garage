@@ -1,0 +1,43 @@
+15:25:30 **** Incremental Build of configuration Debug for project RFID_Timer ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../Ultrasonic.h:12,
+                 from ../main.c:21:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+Finished building: ../main.c
+ 
+Building target: RFID_Timer.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,RFID_Timer.map -mmcu=atmega32 -o "RFID_Timer.elf"  ./USART.o ./Ultrasonic.o ./lcd.o ./main.o ./mfrc522.o ./spi.o   
+Finished building target: RFID_Timer.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S RFID_Timer.elf  >"RFID_Timer.lss"
+Finished building: RFID_Timer.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex RFID_Timer.elf  "RFID_Timer.hex"
+Finished building: RFID_Timer.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 RFID_Timer.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   23880 bytes (72.9% Full)
+(.text + .data + .bootloader)
+
+Data:        444 bytes (21.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+15:25:31 Build Finished. 0 errors, 2 warnings. (took 1s.459ms)
+
